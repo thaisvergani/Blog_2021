@@ -8,29 +8,20 @@
             <h1>Blog da Thais</h1>
         </header>
 
+        {%  for post in post_list  %}
+           
+         
         <article>
             <h2>
-                <a href=''>
-                    Postagem A
+                <a href=''> {{ post.title }}
                 </a>  
             </h2>
-            <time>publicado em: 28/07/2021 às 20:41</time>
+            <time>publicado em:  {{ post.published_date }}</time>
             <p>
-                duifhasiudfhaisdfspodfaoisjdfioasjdifasijdfduifhasiudfhaisdfspodfaoisjdfioasjdifasijdfduifhasiudfhaisdfspodfaoisjdfioasjdifasijdf
+                {{ post.text }}
             </p>
         </article>
-        
-        <article>
-            <h2>
-                <a href=''>
-                    Postagem A
-                </a>  
-            </h2>
-            <time>publicado em: 28/07/2021 às 20:41</time>
-            <p>
-                duifhasiudfhaisdfspodfaoisjdfioasjdifasijdfduifhasiudfhaisdfspodfaoisjdfioasjdifasijdfduifhasiudfhaisdfspodfaoisjdfioasjdifasijdf
-            </p>
-        </article>
+    {% endfor %}
 
     </body>
 </html>
